@@ -9,7 +9,7 @@ services:
       LDAP_ORGANISATION: "Example Inc."
       LDAP_DOMAIN: "kevin.org"
       LDAP_BASE_DN: ""
-      LDAP_ADMIN_PASSWORD: "xxgl168"
+      LDAP_ADMIN_PASSWORD: "xxxxxxx"
       LDAP_CONFIG_PASSWORD: "config"
       LDAP_READONLY_USER: "false"
       #LDAP_READONLY_USER_USERNAME: "readonly"
@@ -62,6 +62,6 @@ services:
       LDAP_URL: ldap://openldap:389
       LDAP_BASE: "ou=it,dc=kevin,dc=org"
       LDAP_BINDDN: "cn=admin,dc=kevin,dc=org"
-      LDAP_BINDPW: "xxgl168"
+      LDAP_BINDPW: "xxxxxx"
     ports:
       - "81:80"
