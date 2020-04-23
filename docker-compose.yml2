@@ -1,0 +1,20 @@
+version: "3"
+services:
+  ldap-server:
+    image: osixia/openldap:1.1.8
+    environment:
+      LDAP_ADMIN_PASSWORD: "admin"
+      LDAP_CONFIG_PASSWORD: "admin"
+    port:
+      - "389:389"
+    volumes:
+      - type: volume
+        source: mydata
+        target:  
+  ldap-phpadmin:
+    - tls: true
+    - login:
+      - bind_id: cn=admin,dc=weihua,dc=com
+    image: osixia/phpldapadmin
+    port:
+       - "443:443"
